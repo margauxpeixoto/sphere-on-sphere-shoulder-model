@@ -1,0 +1,65 @@
+ // Shortcuts
+AnyFolder &Jnt = Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt;
+AnyFolder &Seg = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg;
+AnyFolder &Mus = Main.HumanModel.BodyModel.Right.ShoulderArm.Mus;
+
+
+
+
+
+// Save in a *.txt file
+AnyOutputFile FileOut = {
+  FileName = .OutputFileName + ".txt";
+  
+  NumberFormat.Digits = 6;
+  
+  // Header
+  Header = {
+    TitleSectionOnOff = On;
+    ConstSectionOnOff = On;
+    VarSectionOnOff = On;
+    ColumnNamesOnOff = On;  //swicth the column names on/off
+    LinePrefix = "";
+    ShortenNamesOnOff = Off;
+    
+  };     
+  //-----------------SIMULATIONS PARAMETERS----------------------------
+  // Input Values 
+  AnyVar nstep = Main.Study.nStep;
+  
+  AnyVar rg = Main.InputVariables.MorphotypeParameters.rh; 
+  AnyVar rh = Main.InputVariables.MorphotypeParameters.rg;
+  AnyVar AcromionScalingFactor = Main.InputVariables.MorphotypeParameters.AcromionScalingFactor;
+//  AnyVar DumbellMass = Main.Model.EnvironmentModel.Dumbbell.Mass;
+  
+//  AnyVar k0 = Main.InputVariables.FDK.k0;   
+//  AnyVar k1 = Main.InputVariables.FDK.k1;  
+//  AnyVar k2 = Main.InputVariables.FDK.k2;
+//  AnyVar k3 = Main.InputVariables.FDK.k3;
+//  AnyVar k4 = Main.InputVariables.FDK.k4; 
+//  AnyVar kz = Main.InputVariables.FDK.kz;
+
+      AnyVar kML = Main.InputVariables.FDK.kML;
+      AnyVar kIS = Main.InputVariables.FDK.kIS;
+      AnyVar kAP = Main.InputVariables.FDK.kAP;
+
+  
+  AnyVector abduction = Main.HumanModel.BodyModel.Interface.Right.GlenohumeralAbduction.Pos;
+  AnyVector flexion = Main.HumanModel.BodyModel.Interface.Right.GlenohumeralFlexion.Pos;
+
+  
+  AnyVec3 Ins = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.O_deltoideus_lateral_part_2.r;
+  AnyVec3 Ori = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus.gh.r;
+  
+  
+  AnyFloat SpringForce = Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.ShoulderPE.F;
+  AnyEnumMuscleRecruitmentType MuscleRecruitment = Main.Study.InverseDynamics.Criterion.Type;
+  AnyVar ForceDepKinError = Main.Study.InverseDynamics.ForceDepKinError;
+  
+};
+
+
+
+
+
+
