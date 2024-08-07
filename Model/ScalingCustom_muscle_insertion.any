@@ -10,8 +10,16 @@ HumanModel.Scaling.GeometricalScaling = {
     #include "Scapula/ScalingLawScapula.any"
     AnyFunTransform3D &ScaleFunction = MyScalingLaw.MyTransform;
   }; 
-
+  
+  #define CUSTOM_SCALING_Right_Humerus
+  Right.Humerus= {
+    #include "Humerus/ScalingLawHumerus.any"
+    AnyFunTransform3D &ScaleFunction = MyScalingLaw.MyTransform;
+  }; 
+  
+  
 }; // GeometricalScaling
+
 
 
 
