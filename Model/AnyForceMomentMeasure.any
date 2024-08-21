@@ -1,0 +1,79 @@
+/// Force-moment-measure measuring forces applied to given segment, here the humerus
+/// A point of interest is given by RefPoint, and this is the reference for the moment contributions.
+/// Three forces, muscles and gravity, have been included in the measurement
+AnyForceMomentMeasure2 ForceMeasure_infra = {
+  
+  RefPoint = &Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.gh.Glenoid_contact_ref;
+  IncludeSegments = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus};
+  
+  IncludeForces = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.infraspinatus_1, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.infraspinatus_2, 
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.infraspinatus_3, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.infraspinatus_4,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.infraspinatus_5, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.infraspinatus_6};
+  
+  IncludeGravity = Off;
+}; //end infra
+
+AnyForceMomentMeasure2 ForceMeasure_supra = {
+  
+  RefPoint = &Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.gh.Glenoid_contact_ref;
+  IncludeSegments = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus};
+  
+  IncludeForces = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_1, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_2, 
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_3, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_4,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_5, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_6};
+  
+  IncludeGravity = Off;
+};//end supra
+
+AnyForceMomentMeasure2 ForceMeasure_subscap = {
+  
+  RefPoint = &Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.gh.Glenoid_contact_ref;
+  IncludeSegments = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus};
+  
+  IncludeForces = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.subscapularis_1, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.subscapularis_2, 
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.subscapularis_3, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.subscapularis_4,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.subscapularis_5, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.subscapularis_6};
+  
+  IncludeGravity = Off;
+};//end subscap
+
+AnyForceMomentMeasure2 ForceMeasure_delt_ant = {
+  
+  RefPoint = &Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.gh.Glenoid_contact_ref;
+  IncludeSegments = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus};
+  
+  IncludeForces = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.deltoideus_anterior_part_1, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.deltoideus_anterior_part_2, 
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.deltoideus_anterior_part_3, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.deltoideus_anterior_part_4
+  };
+  
+  IncludeGravity = Off;
+};//end delt ant
+
+AnyForceMomentMeasure2 ForceMeasure_delt_lat = {
+  
+  RefPoint = &Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.gh.Glenoid_contact_ref;
+  IncludeSegments = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus};
+  
+  IncludeForces = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.deltoideus_lateral_part_1, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.deltoideus_lateral_part_2, 
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.deltoideus_lateral_part_3, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.deltoideus_lateral_part_4
+  };
+  
+  IncludeGravity = Off;
+};//end delt lat
+
+
+AnyForceMomentMeasure2 ForceMeasure_delt_post = {
+  
+  RefPoint = &Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.gh.Glenoid_contact_ref;
+  IncludeSegments = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus};
+  
+  IncludeForces = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.deltoideus_posterior_part_1, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.deltoideus_posterior_part_2, 
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.deltoideus_posterior_part_3, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.deltoideus_posterior_part_4
+  };
+  IncludeGravity = Off;
+  };//end delt post
+  
+  
+
+
+

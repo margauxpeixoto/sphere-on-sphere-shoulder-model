@@ -41,8 +41,8 @@ AnyFolder GH_2spheres =
       ARel = RotMat(90*pi/180, y); //pour avoir le repere avec lat+, sup+ et ant+
       viewRefFrame.Visible = On;   
       }; 
-  };
-  
+    };  
+    
   //Sphere on sphere joint definition
 Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt = {  
  
