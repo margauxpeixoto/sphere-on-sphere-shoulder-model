@@ -30,6 +30,7 @@ AnyOutputFile FileOut = {
   AnyVar rg = Main.InputVariables.MorphotypeParameters.rh; 
   AnyVar rh = Main.InputVariables.MorphotypeParameters.rg;
   AnyVar AcromionScalingFactor = Main.InputVariables.MorphotypeParameters.AcromionScalingFactor;
+  AnyVar SupraHumScalingFactor = Main.InputVariables.MorphotypeParameters.SupraHumScalingFactor;
 //  AnyVar DumbellMass = Main.Model.EnvironmentModel.Dumbbell.Mass;
   
 //  AnyVar k0 = Main.InputVariables.FDK.k0;   
