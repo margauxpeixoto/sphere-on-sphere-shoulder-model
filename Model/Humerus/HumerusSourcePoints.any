@@ -9,6 +9,27 @@ AnyMatrix PointsAffine0 = {
   //  {0.018874, 0.017911, 0.003956}, // supra 4 Ins
   //  {0.020686, 0.016879, 0.011345}, // supra 5 Ins
   //  {0.020686, 0.016879, 0.011345}, // supra 6 Ins
+  {0.01629, 0.00944861, 0.01869}, // infra 1 Ins
+  {0.016288, 0.009448607, 0.018695}, // infra 2 Ins
+  {0.018722, 0.00182842, 0.02067}, // infra 3 Ins
+  {0.01872, 0.001828424, 0.020673}, // infra 4 Ins
+  {0.021354, -0.006057973, 0.022805}, // infra 5 Ins
+  {0.02135, -0.00605797, 0.02281}, // infra 6 Ins
+  {-0.01416, 0.004191, -0.024937}, // subscap 1 Ins
+  {-0.014159, 0.004191, -0.024937}, // subscap 2 Ins 
+  {-0.01378, -0.006596, -0.027658}, // subscap 3 Ins 
+  {-0.013783, -0.006596, -0.027658}, // subscap 4 Ins 
+  {-0.01361, -0.011478, -0.0289}, // subscap 5 Ins 
+  {-0.013608, -0.011478, -0.0289}, // subscap 6 Ins 
+  {0.02236, -0.005187, 0.015035}, // teres minor 1 Ins 
+  {0.022358, -0.005187, 0.015035}, // teres minor 2 Ins
+  {0.02274, -0.013359, 0.011528}, // teres minor 3 Ins 
+  {0.022739, -0.013359, 0.011528}, // teres minor 4 Ins 
+  {0.02307, -0.020224, 0.008587}, // teres minor 5 Ins 
+  {0.023068, -0.020224, 0.008587}, // teres minor 6 Ins 
+  {0.018379, 0.014001, -0.017381}, // via point 1 biceps brachii long
+  {0.018879, -0.0324443, -0.008381}, // via point 2 biceps brachii long
+  {-0.004633998, 0.01056599, -0.006212992}, // biceps brachii long Ins
   {0.01154131, -0.13516626, 0.018559281},  // DT
   {0.016696623, -0.00039992714, -0.024833431},  // LT1
   {-0.00082540943, -0.012710826, -0.027324049},  // LT2
@@ -49,6 +70,7 @@ AnyMatrix PointsAffine0 = {
   {0.015702257, -0.28087083, 0.018023023},  // LSR1
   {-0.0016646972, -0.32719505, -0.00095377932},  // OF
   {-0.010277782, -0.14014132, 0.0041358843},  // MLR4
+  
 };
 
 AnyMatrix PointsRBF0 = {
@@ -62,6 +84,27 @@ AnyMatrix PointsRBF0 = {
   {0.018874, 0.017911, 0.003956}, // supra 4 Ins
   {0.02069, 0.01688, 0.01134}, // supra 5 Ins
   {0.020686, 0.016879, 0.011345}, // supra 6 Ins
+  {0.01629, 0.00944861, 0.01869}, // infra 1 Ins
+  {0.016288, 0.009448607, 0.018695}, // infra 2 Ins
+  {0.018722, 0.00182842, 0.02067}, // infra 3 Ins
+  {0.01872, 0.001828424, 0.020673}, // infra 4 Ins
+  {0.021354, -0.006057973, 0.022805}, // infra 5 Ins
+  {0.02135, -0.00605797, 0.02281}, // infra 6 Ins
+  {-0.01416, 0.004191, -0.024937}, // subscap 1 Ins
+  {-0.014159, 0.004191, -0.024937}, // subscap 2 Ins 
+  {-0.01378, -0.006596, -0.027658}, // subscap 3 Ins 
+  {-0.013783, -0.006596, -0.027658}, // subscap 4 Ins 
+  {-0.01361, -0.011478, -0.0289}, // subscap 5 Ins 
+  {-0.013608, -0.011478, -0.0289}, // subscap 6 Ins 
+  {0.02236, -0.005187, 0.015035}, // teres minor 1 Ins 
+  {0.022358, -0.005187, 0.015035}, // teres minor 2 Ins
+  {0.02274, -0.013359, 0.011528}, // teres minor 3 Ins 
+  {0.022739, -0.013359, 0.011528}, // teres minor 4 Ins 
+  {0.02307, -0.020224, 0.008587}, // teres minor 5 Ins 
+  {0.023068, -0.020224, 0.008587}, // teres minor 6 Ins 
+  {0.018379, 0.014001, -0.017381}, // via point 1 biceps brachii long
+  {0.018879, -0.0324443, -0.008381}, // via point 2 biceps brachii long
+  {-0.004633998, 0.01056599, -0.006212992}, // biceps brachii long Ins
   {0.01154131, -0.13516626, 0.018559281},  // DT
   {0.016696623, -0.00039992714, -0.024833431},  // LT1
   {-0.00082540943, -0.012710826, -0.027324049},  // LT2
@@ -109,12 +152,33 @@ AnyStringArray PointsName0 = {
   "gh", 
   "condylus_hum",
   "condylus_humT",
-    "supra 1 Ins",
+  "supra 1 Ins",
   "supra 2 Ins",
   "supra 3 Ins",
-    "supra 4 Ins",
+  "supra 4 Ins",
   "supra 5 Ins",
-    "supra 6 Ins",
+  "supra 6 Ins",
+  "infra 1 Ins",
+  "infra 2 Ins",
+  "infra 3 Ins",
+  "infra 4 Ins",
+  "infra 5 Ins",
+  "infra 6 Ins",
+  "subscap 1 Ins",
+  "subscap 2 Ins",
+  "subscap 3 Ins",
+  "subscap 4 Ins", 
+  "subscap 5 Ins", 
+  "subscap 6 Ins", 
+  "teres minor 1 Ins", 
+  "teres minor 2 Ins",
+  "teres minor 3 Ins", 
+  "teres minor 4 Ins", 
+  "teres minor 5 Ins", 
+  "teres minor 6 Ins", 
+  "via point 1 biceps brachii long",
+  "via point 2 biceps brachii long",
+  "biceps brachii long Ins",
   "DT", 
   "LT1", 
   "LT2", 
@@ -157,6 +221,8 @@ AnyStringArray PointsName0 = {
   "MLR4" 
   
 };
+
+
 
 
 

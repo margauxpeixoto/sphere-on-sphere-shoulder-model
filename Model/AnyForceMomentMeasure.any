@@ -37,6 +37,17 @@ AnyForceMomentMeasure2 ForceMeasure_subscap = {
   IncludeGravity = Off;
 };//end subscap
 
+AnyForceMomentMeasure2 ForceMeasure_biceps_lh = {
+  
+  RefPoint = &Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.gh.Glenoid_contact_ref;
+  IncludeSegments = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus};
+  
+  IncludeForces = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.biceps_brachii_caput_longum};
+  
+  IncludeGravity = Off;
+};//end subscap
+
+
 AnyForceMomentMeasure2 ForceMeasure_delt_ant = {
   
   RefPoint = &Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.gh.Glenoid_contact_ref;
@@ -74,6 +85,36 @@ AnyForceMomentMeasure2 ForceMeasure_delt_post = {
   };//end delt post
   
   
+AnyForceMomentMeasure2 ForceMeasure_others = {
+  
+  RefPoint = &Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.gh.Glenoid_contact_ref;
+  IncludeSegments = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus};
+  
+  IncludeForces = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.biceps_brachii_caput_breve,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.coracobrachialis_1,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.coracobrachialis_2,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.coracobrachialis_3,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.coracobrachialis_4,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.coracobrachialis_5,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.coracobrachialis_6,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.teres_major_1,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.teres_major_2,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.teres_major_3,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.teres_major_4,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.teres_major_5,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.teres_major_6,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.teres_minor_1,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.teres_minor_2,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.teres_minor_3,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.teres_minor_4,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.teres_minor_5,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.teres_minor_6,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.Triceps_LH_1,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.Triceps_LH_2
+    
+  };
+  IncludeGravity = Off;
+  };//end delt post
 
 
 
