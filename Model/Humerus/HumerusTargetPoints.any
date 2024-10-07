@@ -30,6 +30,7 @@ AnyMatrix PointsAffine1 = {
   {0.018379, 0.014001, -0.017381}, // via point 1 biceps brachii long
   {0.018879, -0.0324443, -0.008381}, // via point 2 biceps brachii long
   {-0.004633998, 0.01056599, -0.006212992}, // biceps brachii long Ins
+    {-0.05156146, 1.631868, 0.1518916}, // biceps brachii long Org
   {0.01154131, -0.13516626, 0.018559281},  // DT
   {0.016696623, -0.00039992714, -0.024833431},  // LT1
   {-0.00082540943, -0.012710826, -0.027324049},  // LT2
@@ -105,6 +106,7 @@ AnyMatrix PointsRBF1 = {
   {0.018379, 0.014001, -0.017381}, // via point 1 biceps brachii long
   {0.018879, -0.0324443, -0.008381}, // via point 2 biceps brachii long
   {-0.004633998, 0.01056599, -0.006212992}, // biceps brachii long Ins
+    {-0.05156146, 1.631868, 0.1518916}, // biceps brachii long Org
   {0.01154131, -0.13516626, 0.018559281},  // DT
   {0.016696623, -0.00039992714, -0.024833431},  // LT1
   {-0.00082540943, -0.012710826, -0.027324049},  // LT2
@@ -179,6 +181,7 @@ AnyStringArray PointsName1 = {
   "via point 1 biceps brachii long",
   "via point 2 biceps brachii long",
   "biceps brachii long Ins",
+  "biceps brachii long Org",
   "DT", 
   "LT1", 
   "LT2", 

@@ -1,4 +1,4 @@
- //Definition of the GH joint as a sphere on sphere joint
+//Definition of the GH joint as a sphere on sphere joint
 AnyFolder GH_2spheres =
 {
   //Definition of sphere parameters; from Yamani, L. Statistical Shape Model
@@ -34,18 +34,18 @@ AnyFolder GH_2spheres =
       };
     }; 
     
-     //Referential in contact with the spheres, attached to the scapula. 
-//     Used to measure translations of the humeral head in the scapula referential.       
-      AnyRefNode Glenoid_contact_ref ={
+    //Referential in contact with the spheres, attached to the scapula. 
+    //     Used to measure translations of the humeral head in the scapula referential.       
+    AnyRefNode Glenoid_contact_ref ={
       sRel = {-(Main.Model.GH_2spheres.rg - Main.Model.GH_2spheres.rh),0.00,0.0}; 
       ARel = RotMat(90*pi/180, y); //pour avoir le repere avec lat+, sup+ et ant+
       viewRefFrame.Visible = On;   
-      }; 
-    };  
-    
+    }; 
+  };  
+  
   //Sphere on sphere joint definition
-Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt = {  
- 
+  Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt = {  
+    
     // GH joint defined as a length constraint on a pline through both centers. Simulated contact between spheres.
     AnyKinEqSimpleDriver GH_contact = {
       AnyKinPLine pline = {
@@ -65,8 +65,16 @@ Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt = {
       AnyRefFrame &ori = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.gh.Glenoid_contact_ref;
       AnyRefFrame &ins = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus.gh.Humerus_sphere_center;
     };
-
-          
+    
+    //Measure to obtain the GH rotation between hum and scapula
+    AnyKinRotational GHrot = 
+    {
+      Type = RotVector;
+      AnyRefFrame &ori = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.gh.Glenoid_contact_ref;
+      AnyRefFrame &ins = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus.gh.Humerus_sphere_center;
+    };
+    
+    
     //Measurement between sphere centers. 
     AnyKinLinear GHLin = {
       AnyRefFrame &ori = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.gh.Glenoid_sphere_center;
@@ -76,13 +84,13 @@ Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt = {
         RGB = {0,1,0};
         
       };
-     
-    };
       
+    };
     
-//     FDK driver to represent the two possible movements of the humeral head
+    
+    //     FDK driver to represent the two possible movements of the humeral head
     AnyKinEqSimpleDriver GH_fdk = {
-        AnyKinLinear &ref = .GHLin;    
+      AnyKinLinear &ref = .GHLin;    
       MeasureOrganizer = {1,2};
       DriverPos = {0,0};
       DriverVel = {0,0};
@@ -103,30 +111,30 @@ Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt = {
         Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHLin.Pos[2]   
       };
       
-//            AnyVar k0 = Main.InputVariables.FDK.k0;   
-//            AnyVar k1 = Main.InputVariables.FDK.k1;  
-//            AnyVar k2 = Main.InputVariables.FDK.k2;
-//            AnyVar k3 = Main.InputVariables.FDK.k3;
-//            AnyVar k4 = Main.InputVariables.FDK.k4; 
-//            AnyVar kz = Main.InputVariables.FDK.kz;
-//            
+      //            AnyVar k0 = Main.InputVariables.FDK.k0;   
+      //            AnyVar k1 = Main.InputVariables.FDK.k1;  
+      //            AnyVar k2 = Main.InputVariables.FDK.k2;
+      //            AnyVar k3 = Main.InputVariables.FDK.k3;
+      //            AnyVar k4 = Main.InputVariables.FDK.k4; 
+      //            AnyVar kz = Main.InputVariables.FDK.kz;
+      //            
       AnyVar kML = Main.InputVariables.FDK.kML;
       AnyVar kIS = Main.InputVariables.FDK.kIS;
       AnyVar kAP = Main.InputVariables.FDK.kAP;
       
       
-//            F={ 
-//              kz*Eps[0],
-//              -(k0 + k1*Eps[1] + k2*Eps[1]^2 + k3*Eps[1]^3 + k4*Eps[1]^4),
-//              -(k0 + k1*Eps[2] + k2*Eps[2]^2 + k3*Eps[2]^3 + k4*Eps[2]^4)
-//            };   
-            
+      //            F={ 
+      //              kz*Eps[0],
+      //              -(k0 + k1*Eps[1] + k2*Eps[1]^2 + k3*Eps[1]^3 + k4*Eps[1]^4),
+      //              -(k0 + k1*Eps[2] + k2*Eps[2]^2 + k3*Eps[2]^3 + k4*Eps[2]^4)
+      //            };   
+      
       F={ 
         kML*Eps[0],
         kIS*Eps[1],
         kAP*Eps[2]
       }; 
-            
+      
     };
     
     
@@ -137,6 +145,7 @@ Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt = {
   
 }; 
 //end off GH_2spheres
+
 
 
 
