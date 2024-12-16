@@ -25,7 +25,6 @@ Main =
     AnyFolder &BodyModel = .HumanModel.BodyModel;
     AnyFolder &DefaultMannequinDrivers = .HumanModel.DefaultMannequinDrivers;
     
-    
     // Environment files are used to include objects surrounding human
     #include "Model\Environment.any"   
     
@@ -39,6 +38,9 @@ Main =
     
     // New definition of the GH joint: sphere on sphere joint
     #include "Model\Jnt2spheres.any" 
+    
+    // Torus de contournement pour le supra
+    #include "Model\MySupraspinatusWrapping.any"
     
     // Force muscle contribution
     #include "Model/AnyForceMomentMeasure.any"
@@ -88,29 +90,47 @@ Main =
     
     //exclusion of the old GHJoint et sa reaction
     
-    MechObjectExclude = {
-      
-      &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GlenoHumeralJoint,
-      
-      &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GlenoHumeralJoint.Constraints,
-      
-      &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle1,
-      
-      &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle2,
-      
-      &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle3,
-      
-      &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle4,
-      
-      &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle5,
-      
-      &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle6,
-      
-      &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle7,
-      
-      &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle8
-      
-    };
+//    MechObjectExclude = {
+//      
+//      &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GlenoHumeralJoint,
+//      
+//      &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GlenoHumeralJoint.Constraints,
+//      
+//      &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle1,
+//      
+//      &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle2,
+//      
+//      &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle3,
+//      
+//      &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle4,
+//      
+//      &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle5,
+//      
+//      &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle6,
+//      
+//      &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle7,
+//      
+//      &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle8,
+//       
+//    };
+    
+MechObjectExclude = arrcat(
+    {
+        &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GlenoHumeralJoint,
+        &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GlenoHumeralJoint.Constraints,
+        &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle1,
+        &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle2,
+        &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle3,
+        &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle4,
+        &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle5,
+        &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle6,
+        &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle7,
+        &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle8
+    },
+    ObjSearch("Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_*", "AnyMechObject"),
+    ObjSearchRecursive("Main.HumanModel.BodyModel.Right.ShoulderArm.Mus", "supraspinatus_*.*", "AnyMechObject")
+);    
+    
     
     //Excludes the old GHJoint for in the calibration sequencen
     //Comment if not using MusclesHill model
@@ -140,13 +160,14 @@ Main =
     ObjSearchRecursive("Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GlenoHumeralJoint","*","AnyMechObject"));
     
     
+    
     //    AnyString OutputFileName =ANYBODY_PATH_OUTPUT + ANYBODY_NAME_MAINFILE + "_F=" + strval(ForceF);
     AnyString OutputFileName =ANYBODY_PATH_OUTPUT + ANYBODY_NAME_MAINFILE + "_F=";
     
     AnyVar JointAngleAbd =  Main.HumanModel.BodyModel.Right.ShoulderArm.InterfaceFolder.GlenohumeralAbduction.Pos[0]*180/pi  ;    
     AnyVar JointAngleFlx =  Main.HumanModel.BodyModel.Right.ShoulderArm.InterfaceFolder.GlenohumeralFlexion.Pos[0]*180/pi  ;
     
-    #include "Model\EvaluateAbductionMomentArm.any"
+//    #include "Model\EvaluateAbductionMomentArm.any"
     //    #include "Model\EvaluateFlexionMomentArm.any"
     
     #include "Model\AnyOutputFile.any"
