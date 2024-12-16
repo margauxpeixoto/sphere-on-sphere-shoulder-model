@@ -18,6 +18,7 @@ Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula = {
     
   }; // My_supraspinatus_torus
   
+
 }; // Scapula
 
 Main.HumanModel.BodyModel.Right.ShoulderArm.Mus = {
@@ -30,7 +31,7 @@ Main.HumanModel.BodyModel.Right.ShoulderArm.Mus = {
     AnySurfEllipsoid &Surf =.art_gh_humRef;
     
     // added wrapping surfaces    
-//    AnySurfSphere &Surf2 = ..Seg.Scapula.My_supraspinatus_sphere.surface;
+    AnySurfSphere &Surf2 = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus.gh.Humerus_sphere_center.HH_sphere;
     AnySurfTorus &Surf3 = ..Seg.Scapula.My_supraspinatus_torus.surface;   
     
     SPLine = {
@@ -50,7 +51,7 @@ Main.HumanModel.BodyModel.Right.ShoulderArm.Mus = {
     AnySurfEllipsoid &Surf =.art_gh_humRef;
     
     // added wrapping surfaces    
-//    AnySurfSphere &Surf2 = ..Seg.Scapula.My_supraspinatus_sphere.surface;
+    AnySurfSphere &Surf2 = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus.gh.Humerus_sphere_center.HH_sphere;
     AnySurfTorus &Surf3 = ..Seg.Scapula.My_supraspinatus_torus.surface; 
     
     SPLine.InitWrapPosVecArr = .My_supraspinatus_1.SPLine.InitWrapPosVecArr;   
@@ -80,7 +81,7 @@ Main.HumanModel.BodyModel.Right.ShoulderArm.Mus = {
     AnySurfEllipsoid &Surf =.art_gh_humRef;
     
     // added wrapping surfaces    
-//    AnySurfSphere &Surf2 = ..Seg.Scapula.My_supraspinatus_sphere.surface;
+    AnySurfSphere &Surf2 = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus.gh.Humerus_sphere_center.HH_sphere;
     AnySurfTorus &Surf3 = ..Seg.Scapula.My_supraspinatus_torus.surface; 
     
     SPLine.InitWrapPosVecArr = .My_supraspinatus_1.SPLine.InitWrapPosVecArr;
@@ -94,7 +95,7 @@ Main.HumanModel.BodyModel.Right.ShoulderArm.Mus = {
     AnySurfEllipsoid &Surf =.art_gh_humRef;
     
     // added wrapping surfaces    
-//    AnySurfSphere &Surf2 = ..Seg.Scapula.My_supraspinatus_sphere.surface;
+    AnySurfSphere &Surf2 = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus.gh.Humerus_sphere_center.HH_sphere;
     AnySurfTorus &Surf3 = ..Seg.Scapula.My_supraspinatus_torus.surface; 
     
     SPLine.InitWrapPosVecArr = .My_supraspinatus_1.SPLine.InitWrapPosVecArr;
@@ -109,7 +110,7 @@ Main.HumanModel.BodyModel.Right.ShoulderArm.Mus = {
     AnySurfEllipsoid &Surf =.art_gh_humRef;
     
     // added wrapping surfaces    
-//    AnySurfSphere &Surf2 = ..Seg.Scapula.My_supraspinatus_sphere.surface;
+    AnySurfSphere &Surf2 = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus.gh.Humerus_sphere_center.HH_sphere;
     AnySurfTorus &Surf3 = ..Seg.Scapula.My_supraspinatus_torus.surface; 
     
     SPLine.InitWrapPosVecArr = .My_supraspinatus_1.SPLine.InitWrapPosVecArr;
