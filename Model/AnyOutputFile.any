@@ -31,6 +31,10 @@ AnyOutputFile FileOut = {
   AnyVar rh = Main.InputVariables.MorphotypeParameters.rg;
   AnyVar AcromionScalingFactor = Main.InputVariables.MorphotypeParameters.AcromionScalingFactor;
   AnyVar SupraHumScalingFactor = Main.InputVariables.MorphotypeParameters.SupraHumScalingFactor;
+  AnyFloat CoordoSup12 = Main.InputVariables.MorphotypeParameters.CoordoSup12; 
+  AnyFloat CoordoSup34 = Main.InputVariables.MorphotypeParameters.CoordoSup34;
+  AnyFloat CoordoSup56 = Main.InputVariables.MorphotypeParameters.CoordoSup56;
+  
   //  AnyVar DumbellMass = Main.Model.EnvironmentModel.Dumbbell.Mass;
   
   //  AnyVar k0 = Main.InputVariables.FDK.k0;   
@@ -57,6 +61,12 @@ AnyOutputFile FileOut = {
   AnyVec3 BicLVP2 = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus.sulcus_intertubercularisTop.r;
   AnyVec3 BicLIns = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Radius.I_Biceps_LH.r;
   
+  AnyVec3 sRelBicOri = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.O_biceps_brachii_caput_longum.sRel;
+  AnyVec3 sRelBicVP1 = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus.sulcus_intertubercularisTop.sRel;
+  AnyVec3 sRelBicVP2 = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus.sulcus_intertubercularis.sRel;
+  AnyVec3 sRelBicIns = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Radius.I_Biceps_LH.sRel;
+  
+  
   AnyVec3 SupraOri1 = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.O_supraspinatus_1.r;
   AnyVec3 SupraOri2 = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.O_supraspinatus_2.r;
   AnyVec3 SupraOri3 = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.O_supraspinatus_3.r;
@@ -75,6 +85,8 @@ AnyOutputFile FileOut = {
   AnyVar ForceDepKinError = Main.Study.InverseDynamics.ForceDepKinError;
   
 };
+
+
 
 
 

@@ -14,51 +14,56 @@ AnyFolder InputVariables = {
   //  #define m_ResultFolder "Ceraver\"
   //  #define m_ResultPath "C:\Users\p0077871\Documents\PRe\Results\Analyse Version\"
   
-
-    
-    
+  
+  
+  
   AnyFolder MorphotypeParameters = 
   {
-     AnyVar rh = 0.0236; //SSM model moyen
-     AnyVar rg = 0.0316;
-//    AnyVar rh = 0.03; //0.02
-//    AnyVar rg = 0.034;
+    AnyVar rh = 0.0236; //SSM model moyen
+    AnyVar rg = 0.0316;
+    //    AnyVar rh = 0.0236; 
+    //    AnyVar rg = 0.0237;
     AnyVar AcromionScalingFactor = 0.0; //pas un scaling factor mais ajout de xx mm.
-    AnyVar SupraHumScalingFactor = -0.02; //pas un scaling factor mais ajout de xx mm.
-
+    AnyVar SupraHumScalingFactor = 0.0; //pas un scaling factor mais ajout de xx mm.
+    AnyFloat CoordoSup12 = { 0.0032, 0.0254, -0.0028}; 
+    AnyFloat CoordoSup34 = {0.0056, 0.0253, 0.0049};
+    AnyFloat CoordoSup56 = {0.0081, 0.0233, 0.0122};
+    
+    
   };
   
-//  AnyFolder Wrapping_supra =
-//  {
-//Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus.art_gh_hum = {
-//  AnyVar Radius=0.0236;
-//};
-//};
+  //  AnyFolder Wrapping_supra =
+  //  {
+  //Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus.art_gh_hum = {
+  //  AnyVar Radius=0.0236;
+  //};
+  //};
   
   
   AnyFolder FDK = 
   {
-//          Modele Lauranne 
-//     AnyVar k0 = 10.75;   
-//      AnyVar k1 = -7.787;  
-//      AnyVar k2 = 4.391;
-//      AnyVar k3 = 0;
-//      AnyVar k4 = -0.08637 ; 
-//      AnyVar kz = 10.75;   //ML (Lat=+). NB: ML managed by contact between prosthetic components
-////      
-//     AnyVar k0 = 10.75;   
-//      AnyVar k1 = -7.787;  
-//      AnyVar k2 = 4.391;
-//      AnyVar k3 = 0;
-//      AnyVar k4 = -0.08637 ; 
-//      AnyVar kz = 100; 
-        
-        AnyVar kML = 0.0;
-        AnyVar kIS = 0.0;
-        AnyVar kAP = 0.0;
-
+    //          Modele Lauranne 
+    //     AnyVar k0 = 10.75;   
+    //      AnyVar k1 = -7.787;  
+    //      AnyVar k2 = 4.391;
+    //      AnyVar k3 = 0;
+    //      AnyVar k4 = -0.08637 ; 
+    //      AnyVar kz = 10.75;   //ML (Lat=+). NB: ML managed by contact between prosthetic components
+    ////      
+    //     AnyVar k0 = 10.75;   
+    //      AnyVar k1 = -7.787;  
+    //      AnyVar k2 = 4.391;
+    //      AnyVar k3 = 0;
+    //      AnyVar k4 = -0.08637 ; 
+    //      AnyVar kz = 100; 
+    
+    AnyVar kML = 0.0;
+    AnyVar kIS = 0.0;
+    AnyVar kAP = 0.0;
+    
     
   };
   
 };
+
 

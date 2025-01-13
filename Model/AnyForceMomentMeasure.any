@@ -25,6 +25,19 @@ AnyForceMomentMeasure2 ForceMeasure_supra = {
   IncludeGravity = Off;
 };//end supra
 
+AnyForceMomentMeasure2 ForceMeasure_supra_scap = {
+  
+  RefPoint = &Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus.I_supraspinatus_1;
+  IncludeSegments = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus};
+  
+  IncludeForces = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_1, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_2, 
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_3, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_4,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_5, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_6};
+  
+  IncludeGravity = Off;
+};//end supra
+
+
 AnyForceMomentMeasure2 ForceMeasure_subscap = {
   
   RefPoint = &Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.gh.Glenoid_contact_ref;

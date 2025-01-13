@@ -20,7 +20,7 @@
 //#define BM_CUSTOM_SCALING_Right_Scapula
 //#define BM_CUSTOM_SCALING_Right_Humerus
 //#include "CustomScaling.any" // scaling from SSM morphotypes
-#include "ScalingCustom_muscle_insertion.any" // scaling directly muscles insertions
+//#include "ScalingCustom_muscle_insertion.any" // scaling directly muscles insertions
 
  //--------------- END OF SCALING CONFIGURATION -------------------
 

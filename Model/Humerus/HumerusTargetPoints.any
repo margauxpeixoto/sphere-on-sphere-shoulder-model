@@ -28,7 +28,7 @@ AnyMatrix PointsAffine1 = {
   {0.02307, -0.020224, 0.008587}, // teres minor 5 Ins 
   {0.023068, -0.020224, 0.008587}, // teres minor 6 Ins 
   {0.018379, 0.014001, -0.017381}, // via point 1 biceps brachii long
-  {0.018879, -0.0324443, -0.008381}, // via point 2 biceps brachii long
+  {0.018879, -0.031999, -0.008381}, // via point 2 biceps brachii long
   {-0.004633998, 0.01056599, -0.006212992}, // biceps brachii long Ins
     {-0.05156146, 1.631868, 0.1518916}, // biceps brachii long Org
   {0.01154131, -0.13516626, 0.018559281},  // DT
@@ -104,7 +104,7 @@ AnyMatrix PointsRBF1 = {
   {0.02307, -0.020224, 0.008587}, // teres minor 5 Ins 
   {0.023068, -0.020224, 0.008587}, // teres minor 6 Ins 
   {0.018379, 0.014001, -0.017381}, // via point 1 biceps brachii long
-  {0.018879, -0.0324443, -0.008381}, // via point 2 biceps brachii long
+  {0.018879, -0.031999, -0.008381}, // via point 2 biceps brachii long
   {-0.004633998, 0.01056599, -0.006212992}, // biceps brachii long Ins
     {-0.05156146, 1.631868, 0.1518916}, // biceps brachii long Org
   {0.01154131, -0.13516626, 0.018559281},  // DT
