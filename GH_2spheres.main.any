@@ -103,8 +103,8 @@ MechObjectExclude = arrcat(
         &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle7,
         &Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeMuscle8
     },
-//    ObjSearch("Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_*", "AnyMechObject"),
-//    ObjSearchRecursive("Main.HumanModel.BodyModel.Right.ShoulderArm.Mus", "supraspinatus_*.*", "AnyMechObject")
+    ObjSearch("Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_*", "AnyMechObject"),
+    ObjSearchRecursive("Main.HumanModel.BodyModel.Right.ShoulderArm.Mus", "supraspinatus_*.*", "AnyMechObject")
 );    
      
     //Excludes the old GHJoint for in the calibration sequencen
@@ -151,6 +151,7 @@ MechObjectExclude = arrcat(
     AnyOutputFun HumReacForce = {
       Val = Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GH_contact.Reaction.RefFrameOutput.F[0]*Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.gh.Glenoid_contact_ref.Axes;
     };
+    
     
   }; // end of study
   

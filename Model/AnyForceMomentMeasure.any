@@ -16,6 +16,7 @@ AnyForceMomentMeasure2 ForceMeasure_infra = {
 AnyForceMomentMeasure2 ForceMeasure_supra = {
   
   RefPoint = &Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.gh.Glenoid_contact_ref;
+  
   IncludeSegments = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus};
   
   IncludeForces = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_1, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_2, 

@@ -21,23 +21,16 @@ AnyFolder InputVariables = {
   {
     AnyVar rh = 0.0236; //SSM model moyen
     AnyVar rg = 0.0316;
-    //    AnyVar rh = 0.0236; 
-    //    AnyVar rg = 0.0237;
-    AnyVar AcromionScalingFactor = 0.0; //pas un scaling factor mais ajout de xx mm.
-    AnyVar SupraHumScalingFactor = 0.0; //pas un scaling factor mais ajout de xx mm.
-    AnyFloat CoordoSup12 = { 0.0032, 0.0254, -0.0028}; 
-    AnyFloat CoordoSup34 = {0.0056, 0.0253, 0.0049};
-    AnyFloat CoordoSup56 = {0.0081, 0.0233, 0.0122};
+//        AnyVar rh = 0.0236; 
+//        AnyVar rg = 0.0238;
+    AnyVar AcromionScalingFactor = 0.0; //pas un scaling factor mais ajout de xx m.
+    AnyVar SupraHumScalingFactor = 0.0; //pas un scaling factor mais ajout de xx m.
+//    AnyFloat CoordoSup12 = {0.0239     , 0.0128     ,-0.0043   }; 
+//    AnyFloat CoordoSup34 = {0.0255    ,0.0114    ,0.0035    };
+//    AnyFloat CoordoSup56 = {0.0265    , 0.0079   , 0.0108    };
     
     
   };
-  
-  //  AnyFolder Wrapping_supra =
-  //  {
-  //Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus.art_gh_hum = {
-  //  AnyVar Radius=0.0236;
-  //};
-  //};
   
   
   AnyFolder FDK = 
