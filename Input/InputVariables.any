@@ -21,17 +21,65 @@ AnyFolder InputVariables = {
   {
     AnyVar rh = 0.0236; //SSM model moyen
     AnyVar rg = 0.0316;
-//        AnyVar rh = 0.0236; 
-//        AnyVar rg = 0.0238;
+//                AnyVar rh = 0.020; 
+//                AnyVar rg = 0.0201;
     AnyVar AcromionScalingFactor = 0.0; //pas un scaling factor mais ajout de xx m.
     AnyVar SupraHumScalingFactor = 0.0; //pas un scaling factor mais ajout de xx m.
-//    AnyFloat CoordoSup12 = {0.0239     , 0.0128     ,-0.0043   }; 
-//    AnyFloat CoordoSup34 = {0.0255    ,0.0114    ,0.0035    };
-//    AnyFloat CoordoSup56 = {0.0265    , 0.0079   , 0.0108    };
+    AnyFloat CoordoSup12 = {0.0168,    0.0075,   -0.0030}; 
+    AnyFloat CoordoSup34 = {0.0188,    0.0065,    0.0047};
+    AnyFloat CoordoSup56 = {0.0208,    0.0055,    0.0121};
     
-    
+    AnyFloat glenoid_offset = {0.0, -0.01, 0.0};
+     
   };
   
+  AnyFolder MusclesPersonalization = {
+    
+    AnyFloat F0DeltAnt1 = 65.3; //valeure ratio 2/1 65.3
+    AnyFloat F0DeltAnt2 = 65.3; //valeure ratio 2/1 65.3
+    AnyFloat F0DeltAnt3 = 65.3; //valeure ratio 2/1 65.3
+    AnyFloat F0DeltAnt4 = 65.3; //valeure ratio 2/1 65.3
+    
+    AnyFloat F0DeltLat1 = 101.1; //valeure ratio 2/1 101.1
+    AnyFloat F0DeltLat2 = 101.1; //valeure ratio 2/1 101.1
+    AnyFloat F0DeltLat3 = 101.1; //valeure ratio 2/1 101.1
+    AnyFloat F0DeltLat4 = 101.1; //valeure ratio 2/1 101.1
+    
+    AnyFloat F0DeltPost1 = 44.2; //valeure ratio 2/1 44.2
+    AnyFloat F0DeltPost2 = 44.2; //valeure ratio 2/1 44.2
+    AnyFloat F0DeltPost3 = 44.2; //valeure ratio 2/1 44.2
+    AnyFloat F0DeltPost4 = 44.2; //valeure ratio 2/1 44.2
+    
+    AnyFloat F0Supra1 = 500;//valeure initiale 70.2
+    AnyFloat F0Supra2 = 500;//valeure initiale 70.2
+    AnyFloat F0Supra3 = 500;//valeure initiale 70.2
+    AnyFloat F0Supra4 = 500;//valeure initiale 70.2
+    AnyFloat F0Supra5 = 500;//valeure initiale 70.2
+    AnyFloat F0Supra6 = 500;//valeure initiale 70.2
+    
+    AnyFloat F0Subscap1 = 225.0; //valeure initiale 225.0
+    AnyFloat F0Subscap2 = 225.0; //valeure initiale 225.0
+    AnyFloat F0Subscap3 = 225.0; //valeure initiale 225.0
+    AnyFloat F0Subscap4 = 225.0; //valeure initiale 225.0
+    AnyFloat F0Subscap5 = 225.0; //valeure initiale 225.0
+    AnyFloat F0Subscap6 = 225.0; //valeure initiale 225.0
+    
+    AnyFloat F0Infra1 = 200; //valeure initiale 122.58
+    AnyFloat F0Infra2 = 200; //valeure initiale 122.58
+    AnyFloat F0Infra3 = 200; //valeure initiale 122.58
+    AnyFloat F0Infra4 = 200; //valeure initiale 122.58
+    AnyFloat F0Infra5 = 200; //valeure initiale 122.58
+    AnyFloat F0Infra6 = 200; //valeure initiale 122.58
+    
+    AnyFloat SphereSupraWrapR = 0.028;
+    
+    AnyFloat DeltLat1ElliX = 0.03;
+    AnyFloat DeltLat1ElliH = 0.03;
+    
+    
+//    Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.DeltoidWrappingLateral.WrappingSegment.RotNode.Wrapping_1.Surf.Radius
+    
+  };
   
   AnyFolder FDK = 
   {
@@ -58,5 +106,7 @@ AnyFolder InputVariables = {
   };
   
 };
+
+
 
 

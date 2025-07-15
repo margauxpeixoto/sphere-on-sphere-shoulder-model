@@ -44,7 +44,7 @@ Main =
     
     // Force muscle contribution
     #include "Model/AnyForceMomentMeasure.any"
-    
+        
     
     // Hides the old GHReactions lines and nodes
     Main.HumanModel.BodyModel.Right.ShoulderArm.Jnt.GHReactions.EdgeLine1.line.Visible = Off;
@@ -79,12 +79,13 @@ Main =
     //    InitialConditions.SolverType = Kinematics.SolverType ;
     InverseDynamics.ForceDepKinOnOff=On;
     InverseDynamics.ForceDepKin.MaxIteration=50;
-    Main.Study.InverseDynamics.ForceDepKin.ForceTol = 1.0;
+    Main.Study.InverseDynamics.ForceDepKin.ForceTol = 5.0;
     
     
     InverseDynamics.Criterion = {
+//      Type = MR_Polynomial;
       Type = MR_MinMaxAux;
-      AuxQuadraticTerm.Weight = 1.0;
+      AuxQuadraticTerm.Weight = 0.1;
       
     }; // p=3 by default for polynomial
     
@@ -144,6 +145,10 @@ MechObjectExclude = arrcat(
     
     #include "Model\EvaluateAbductionMomentArm.any"
 //    #include "Model\EvaluateFlexionMomentArm.any"
+
+    //Sub acromial measure
+//    #include "Model/SubAcroMeasure.any"
+
     
     #include "Model\AnyOutputFile.any"
     

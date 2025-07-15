@@ -8,7 +8,7 @@ AnyFolder GH_2spheres =
   // Sphere representing the center of humeral head. 
   Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus.gh ={
     AnyRefNode Humerus_sphere_center ={
-      sRel = {-0.0001,0.00,0.0};
+      sRel = {-0.0001, 0.0, 0.0};
       AnySurfSphere HH_sphere = 
       {
         Radius = Main.Model.GH_2spheres.rh;
@@ -23,7 +23,7 @@ AnyFolder GH_2spheres =
   // Sphere representing the center of glenoid fossa. 
   Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.gh = {
     AnyRefNode Glenoid_sphere_center ={
-      sRel = {0.00,0.00,0.0}; //to be defined with a python sphere fitting code
+      sRel = Main.InputVariables.MorphotypeParameters.glenoid_offset; //to be defined with a python sphere fitting code
       AnySurfSphere Glenoid_sphere = 
       {
         Radius = Main.Model.GH_2spheres.rg;

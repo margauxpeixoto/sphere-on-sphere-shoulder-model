@@ -18,7 +18,7 @@ AnyFolder Drivers =
   AnyKinEqSimpleDriver GHDriverRight={
     AnyKinMeasure& ref1 =...BodyModel.Interface.Right.GlenohumeralAbduction;
     DriverPos = {10*pi/180};
-    DriverVel = {150*pi/180};
+    DriverVel = {140*pi/180};
     Reaction.Type = {Off};  
   }; 
   
@@ -37,37 +37,40 @@ AnyFolder Drivers =
 //   
 //  };
   
-  // Definition de la ExternalRotation
+//   Definition de la ExternalRotation
+
+AnyFloat ExtRot = 5;
+
 //  AnyKinEqSimpleDriver GHExternalRotation = {
 //   
 //   AnyKinMeasure& ref1 =...BodyModel.Interface.Right.GlenohumeralExternalRotation;
 //   
-//    DriverPos = {0};
+//    DriverPos = {5};
 //    DriverVel = {0};
 //    Reaction.Type = {Off};
 //   
 //  };
-  
+//  
  
   //Definition de la rotation et flexion pour que l'abduction soit dans le plan de la scapula//
-//AnyKinEqSimpleDriver GHFlexion = {
-//   
-//    AnyKinMeasureLinComb& ref1 =...BodyModel.Interface.Right.ScapulaHumerus.PlaneOfElevation;
-//   
-//    DriverPos = {0};
-//    DriverVel = {0};
-//    Reaction.Type = {Off};
-//   
-//  };
-// 
-////   Sets the axial rotation to 0
-//  AnyKinEqSimpleDriver GHAxialRotation={
-//   
-//    AnyKinMeasureLinComb &ref3 =...BodyModel.Interface.Right.ScapulaHumerus.InternalAxialRotation;
-//   
-//    DriverPos={0};
-//    DriverVel = {0};
-//    Reaction.Type={Off};
-//  };
+AnyKinEqSimpleDriver GHFlexion = {
+   
+    AnyKinMeasureLinComb& ref1 =...BodyModel.Interface.Right.ScapulaHumerus.PlaneOfElevation;
+   
+    DriverPos = {0};
+    DriverVel = {0};
+    Reaction.Type = {Off};
+   
+  };
+ 
+//   Sets the axial rotation to 0
+  AnyKinEqSimpleDriver GHAxialRotation={
+   
+    AnyKinMeasureLinComb &ref3 =...BodyModel.Interface.Right.ScapulaHumerus.InternalAxialRotation;
+   
+    DriverPos={0};
+    DriverVel = {0};
+    Reaction.Type={Off};
+  };
 };
 

@@ -32,10 +32,11 @@ HumanModel.Mannequin = {
       GlenohumeralFlexion =-0; //valeure initiale
 //      GlenohumeralFlexion =0; 
       GlenohumeralAbduction = 5; 
-      GlenohumeralExternalRotation = 5; //valeure initiale
+//      GlenohumeralExternalRotation = 5; //valeure initiale
+GlenohumeralExternalRotation = Main.Model.ModelEnvironmentConnection.Drivers.ExtRot; 
 //     GlenohumeralExternalRotation = 45; // thumbs up 
       
-//      ElbowFlexion = 45.0; 
+//      ElbowFlexion = 90.0; 
       ElbowFlexion = 0.01; //valeure initiale
       ElbowPronation = -20.0;
       

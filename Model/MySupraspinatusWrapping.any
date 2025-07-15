@@ -23,7 +23,7 @@ Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula = {
 Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus.gh = {   
   AnyDrawRefFrame drw = {Visible=Off;};
   AnySurfSphere surface = {
-    Radius = 0.026; //0.028 bon compromis
+    Radius = Main.InputVariables.MusclesPersonalization.SphereSupraWrapR; //0.028 bon compromis
     viewSurface = {Visible=On; RGB={0.65, 0.65, 0.65}; Opacity=0.8;};
   }; // surface
   
