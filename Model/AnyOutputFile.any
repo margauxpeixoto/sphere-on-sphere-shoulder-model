@@ -32,6 +32,7 @@ AnyOutputFile FileOut = {
   AnyVar AcromionScalingFactor = Main.InputVariables.MorphotypeParameters.AcromionScalingFactor;
   AnyVar SupraHumScalingFactor = Main.InputVariables.MorphotypeParameters.SupraHumScalingFactor;
   AnyFloat glenoid_offset = Main.InputVariables.MorphotypeParameters.glenoid_offset;
+  AnyFloat Elli_subscap_radius = Main.HumanModel.BodyModel.Trunk.SegmentsThorax.ThoraxSeg.ij.MySubscapWrappingSurface.Radius;
   
 //    AnyFloat CoordoSup12 = Main.InputVariables.MorphotypeParameters.CoordoSup12; 
 //    AnyFloat CoordoSup34 = Main.InputVariables.MorphotypeParameters.CoordoSup34;

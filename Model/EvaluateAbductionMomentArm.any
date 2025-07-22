@@ -3,7 +3,7 @@
   AnyFolder &Mus=Main.HumanModel.BodyModel.Right.ShoulderArm.Mus;
  
   // Mettre la meme formule que celle mise dans la vitesse angulaire du driver d'abduction dans AngularVelocity  
-  AnyVar AngularVelocity = 120*pi/180;
+  AnyVar AngularVelocity = 140*pi/180;
   
 
   #define _CODE_MACRO_(name) \

@@ -25,11 +25,11 @@ AnyFolder InputVariables = {
 //                AnyVar rg = 0.0201;
     AnyVar AcromionScalingFactor = 0.0; //pas un scaling factor mais ajout de xx m.
     AnyVar SupraHumScalingFactor = 0.0; //pas un scaling factor mais ajout de xx m.
-    AnyFloat CoordoSup12 = {0.0168,    0.0075,   -0.0030}; 
-    AnyFloat CoordoSup34 = {0.0188,    0.0065,    0.0047};
-    AnyFloat CoordoSup56 = {0.0208,    0.0055,    0.0121};
+//    AnyFloat CoordoSup12 = {0.0168,    0.0075,   -0.0030}; 
+//    AnyFloat CoordoSup34 = {0.0188,    0.0065,    0.0047};
+//    AnyFloat CoordoSup56 = {0.0208,    0.0055,    0.0121};
     
-    AnyFloat glenoid_offset = {0.0, -0.01, 0.0};
+    AnyFloat glenoid_offset = {0.0, 0.0, 0.0};
      
   };
   

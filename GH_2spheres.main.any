@@ -42,6 +42,10 @@ Main =
     // Torus de contournement pour le supra
     #include "Model\MySupraspinatusWrapping.any"
     
+    //Torus de contournement subscap
+    #include "Model\MySubscapWrapping.any"
+
+    
     // Force muscle contribution
     #include "Model/AnyForceMomentMeasure.any"
         

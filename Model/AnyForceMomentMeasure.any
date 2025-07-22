@@ -13,30 +13,30 @@ AnyForceMomentMeasure2 ForceMeasure_infra = {
   IncludeGravity = Off;
 }; //end infra
 
-AnyForceMomentMeasure2 ForceMeasure_supra = {
-  
-  RefPoint = &Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.gh.Glenoid_contact_ref;
-  
-  IncludeSegments = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus};
-  
-  IncludeForces = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_1, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_2, 
-    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_3, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_4,
-    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_5, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_6};
-  
-  IncludeGravity = Off;
-};//end supra
-
-//AnyForceMomentMeasure2 ForceMeasure_My_supra = {
+//AnyForceMomentMeasure2 ForceMeasure_supra = {
 //  
 //  RefPoint = &Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.gh.Glenoid_contact_ref;
+//  
 //  IncludeSegments = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus};
 //  
-//  IncludeForces = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.My_supraspinatus_1, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.My_supraspinatus_2, 
-//    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.My_supraspinatus_3, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.My_supraspinatus_4,
-//    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.My_supraspinatus_5, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.My_supraspinatus_6};
+//  IncludeForces = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_1, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_2, 
+//    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_3, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_4,
+//    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_5, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_6};
 //  
 //  IncludeGravity = Off;
 //};//end supra
+
+AnyForceMomentMeasure2 ForceMeasure_My_supra = {
+  
+  RefPoint = &Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Scapula.gh.Glenoid_contact_ref;
+  IncludeSegments = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Humerus};
+  
+  IncludeForces = {&Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.My_supraspinatus_1, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.My_supraspinatus_2, 
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.My_supraspinatus_3, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.My_supraspinatus_4,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.My_supraspinatus_5, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.My_supraspinatus_6};
+  
+  IncludeGravity = Off;
+};//end supra
 
 
 AnyForceMomentMeasure2 ForceMeasure_subscap = {
@@ -223,9 +223,9 @@ AnyForceMomentMeasure2 ForceMeasure_others = {
     &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.infraspinatus_1, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.infraspinatus_2, 
     &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.infraspinatus_3, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.infraspinatus_4,
     &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.infraspinatus_5, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.infraspinatus_6,
-    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_1, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_2, 
-    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_3, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_4,
-    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_5, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.supraspinatus_6,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.My_supraspinatus_1, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.My_supraspinatus_2, 
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.My_supraspinatus_3, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.My_supraspinatus_4,
+    &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.My_supraspinatus_5, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.My_supraspinatus_6,
     &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.subscapularis_1, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.subscapularis_2, 
     &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.subscapularis_3, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.subscapularis_4,
     &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.subscapularis_5, &Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.subscapularis_6,
