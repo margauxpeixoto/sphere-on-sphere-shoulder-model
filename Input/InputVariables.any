@@ -21,16 +21,27 @@ AnyFolder InputVariables = {
   {
     AnyVar rh = 0.0236; //SSM model moyen
     AnyVar rg = 0.0316;
-//                AnyVar rh = 0.020; 
-//                AnyVar rg = 0.0201;
+    //    AnyVar rh = 0.020; 
+    //    AnyVar rg = 0.0201;
     AnyVar AcromionScalingFactor = 0.0; //pas un scaling factor mais ajout de xx m.
     AnyVar SupraHumScalingFactor = 0.0; //pas un scaling factor mais ajout de xx m.
-//    AnyFloat CoordoSup12 = {0.0168,    0.0075,   -0.0030}; 
-//    AnyFloat CoordoSup34 = {0.0188,    0.0065,    0.0047};
-//    AnyFloat CoordoSup56 = {0.0208,    0.0055,    0.0121};
+    //    AnyFloat CoordoSup12 = {0.0168,    0.0075,   -0.0030}; //supra
+    //    AnyFloat CoordoSup34 = {0.0188,    0.0065,    0.0047}; //supra
+    //    AnyFloat CoordoSup56 = {0.0208,    0.0055,    0.0121}; //supra
+    
+    //position insertion subscapulaire
+//    AnyFloat CoordoSubscap12 = {-0.014159, 0.004191, -0.024937}; //valeure initiale
+//    AnyFloat CoordoSubscap34 = {-0.013783, -0.006596, -0.027658}; //valeure initiale
+//    AnyFloat CoordoSubscap56 = {-0.013608, -0.011478, -0.0289}; //valeure initiale
+
+    AnyFloat CoordoSubscap12 = {0.010044453, 0.013017269, -0.020425502}; 
+    AnyFloat CoordoSubscap34 = {0.0096274121, 0.0032718524, -0.029064769}; 
+    AnyFloat CoordoSubscap56 = {0.01415256, -0.0067591667, -0.025414219}; 
+
+    
     
     AnyFloat glenoid_offset = {0.0, 0.0, 0.0};
-     
+    
   };
   
   AnyFolder MusclesPersonalization = {
@@ -77,7 +88,7 @@ AnyFolder InputVariables = {
     AnyFloat DeltLat1ElliH = 0.03;
     
     
-//    Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.DeltoidWrappingLateral.WrappingSegment.RotNode.Wrapping_1.Surf.Radius
+    //    Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.DeltoidWrappingLateral.WrappingSegment.RotNode.Wrapping_1.Surf.Radius
     
   };
   
@@ -106,6 +117,7 @@ AnyFolder InputVariables = {
   };
   
 };
+
 
 
 

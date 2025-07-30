@@ -32,11 +32,16 @@ AnyOutputFile FileOut = {
   AnyVar AcromionScalingFactor = Main.InputVariables.MorphotypeParameters.AcromionScalingFactor;
   AnyVar SupraHumScalingFactor = Main.InputVariables.MorphotypeParameters.SupraHumScalingFactor;
   AnyFloat glenoid_offset = Main.InputVariables.MorphotypeParameters.glenoid_offset;
-  AnyFloat Elli_subscap_radius = Main.HumanModel.BodyModel.Trunk.SegmentsThorax.ThoraxSeg.ij.MySubscapWrappingSurface.Radius;
+//  AnyFloat Elli_subscap_radius = Main.HumanModel.BodyModel.Trunk.SegmentsThorax.ThoraxSeg.ij.MySubscapWrappingSurface.Radius;
   
 //    AnyFloat CoordoSup12 = Main.InputVariables.MorphotypeParameters.CoordoSup12; 
 //    AnyFloat CoordoSup34 = Main.InputVariables.MorphotypeParameters.CoordoSup34;
 //    AnyFloat CoordoSup56 = Main.InputVariables.MorphotypeParameters.CoordoSup56;
+
+AnyFloat CordooSubscap12 = Main.InputVariables.MorphotypeParameters.CoordoSubscap12;
+AnyFloat CordooSubscap34 = Main.InputVariables.MorphotypeParameters.CoordoSubscap34;
+AnyFloat CordooSubscap56 = Main.InputVariables.MorphotypeParameters.CoordoSubscap56;
+
   
   AnyFloat F0DeltAnt1 = Main.HumanModel.BodyModel.Right.ShoulderArm.MuscleModels.deltoideus_anterior_part_1.F0;
   AnyFloat F0DeltAnt2 = Main.HumanModel.BodyModel.Right.ShoulderArm.MuscleModels.deltoideus_anterior_part_2.F0;
@@ -80,8 +85,9 @@ AnyOutputFile FileOut = {
 //  AnyFloat RadiusElliDelt3 = Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.DeltoidWrappingLateral.WrappingSegment.RotNode.Wrapping_3.Surf.Radius;
 //  AnyFloat RadiusElliDelt4 = Main.HumanModel.BodyModel.Right.ShoulderArm.Mus.DeltoidWrappingLateral.WrappingSegment.RotNode.Wrapping_4.Surf.Radius;
   
-  AnyFloat ExtRot = Main.Model.ModelEnvironmentConnection.Drivers.ExtRot;
-  
+//  AnyFloat ExtRot = Main.Model.ModelEnvironmentConnection.Drivers.ExtRot;
+//  AnyFloat ElbFlex = Main.Model.ModelEnvironmentConnection.Drivers.ElbFlex;
+//  
   //  AnyVar DumbellMass = Main.Model.EnvironmentModel.Dumbbell.Mass;
   
   //  AnyVar k0 = Main.InputVariables.FDK.k0;   

@@ -33,12 +33,13 @@ HumanModel.Mannequin = {
 //      GlenohumeralFlexion =0; 
       GlenohumeralAbduction = 5; 
 //      GlenohumeralExternalRotation = 5; //valeure initiale
-GlenohumeralExternalRotation = Main.Model.ModelEnvironmentConnection.Drivers.ExtRot; 
-//     GlenohumeralExternalRotation = 45; // thumbs up 
+//GlenohumeralExternalRotation = Main.Model.ModelEnvironmentConnection.Drivers.ExtRot; 
+     GlenohumeralExternalRotation = 5; // thumbs up 
       
-//      ElbowFlexion = 90.0; 
+//ElbowFlexion = Main.Model.ModelEnvironmentConnection.Drivers.ElbFlex; 
       ElbowFlexion = 0.01; //valeure initiale
-      ElbowPronation = -20.0;
+//      ElbowFlexion = 90; //valeure initiale
+      ElbowPronation = -20.0; //?? 0 non ? 
       
       WristFlexion =0;
       WristAbduction =0;
